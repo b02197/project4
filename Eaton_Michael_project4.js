@@ -112,6 +112,18 @@ var checkUrl = function(){
      
     return urlResults;
     };
+    
+    
+//Number Functions
+
+//Given a string version of a number, such as "42", return the value
+//as an actual Number data type, such an 42.
+    
+var stringNumber = function(){
+  var newNumber =  parseInt(number);   //command to turn string to an integer
+    
+    return newNumber;    //returns a Number
+};
    
     
 
@@ -119,8 +131,9 @@ var checkUrl = function(){
     
 
 
-//String outputs
-console.log("String outputs");
+//String function outputs
+
+console.log("String function outputs");
 var phoneNumber = "123-456-7890";            //Variable for phone number
 console.log(checkPhoneNumber());             //Output for phone number
 var emailAddress = "Meaton@fullsail.edu";    //Variable for Email
@@ -128,3 +141,8 @@ console.log(checkEmailAddress());             //Output for Email
 var url = "http://fulsail.edu";                //Variable for url
 console.log(checkUrl());                        //output for url
 
+//Number function outputs
+
+console.log("Number function outputs")
+var number = "42";                            //Variable for string to number
+console.log(stringNumber())                  //Output for string to Number
