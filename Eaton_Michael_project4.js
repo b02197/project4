@@ -124,8 +124,18 @@ var stringNumber = function(){
     
     return newNumber;    //returns a Number
 };
-   
+
+
+// Format a number to use a specific number of decimal places as for money.
+
+var moveDec = function(){
+    var newMoney = parseFloat(money).toFixed(2); //command to move decimal place
     
+    return newMoney; //returns a string
+    
+}
+    
+
 
 
     
@@ -133,16 +143,28 @@ var stringNumber = function(){
 
 //String function outputs
 
-console.log("String function outputs");
+console.log("String function outputs");       
+
 var phoneNumber = "123-456-7890";            //Variable for phone number
 console.log(checkPhoneNumber());             //Output for phone number
+
 var emailAddress = "Meaton@fullsail.edu";    //Variable for Email
 console.log(checkEmailAddress());             //Output for Email
+
 var url = "http://fulsail.edu";                //Variable for url
 console.log(checkUrl());                        //output for url
 
-//Number function outputs
+    //Number function outputs
 
-console.log("Number function outputs")
-var number = "42";                            //Variable for string to number
-console.log(stringNumber())                  //Output for string to Number
+    console.log("Number function outputs");
+
+    var number = "42";                            //Variable for string to number
+    console.log(stringNumber());                  //Output for string to Number
+
+    var money = 21.3                              //Variable for decimal move
+    console.log(moveDec())                         //Output for decimal move
+
+        //Array function outputs
+
+        console.log("Array function outputs");
+
