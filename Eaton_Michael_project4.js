@@ -105,9 +105,9 @@ var checkUrl = function(){
     
     if(url.substring(0,7) == "http://"){    //check to see if url matches http://
         urlResults = true
-    }
+    };
      if (url.substring(0,8) == "https://"){   //check to see if url matches https://
-        urlResults = true}
+        urlResults = true};
         
      
     return urlResults;
@@ -133,9 +133,29 @@ var moveDec = function(){
     
     return newMoney; //returns a string
     
-}
+};
     
+//Array function
 
+// Find the total value of just the number in an array, even if some of the
+//items are not numbers
+
+
+var array = [1, 2, 20, 73, true, "turtle"]; //Array that will be added
+var addArray = function(incomingArray) {
+    
+    var Sum = 0,      //variables to set start at 0
+        add = 0;
+        
+    for (i = 0; i < incomingArray.length ; i++) {  // For loop to run through the array
+        add = parseFloat(incomingArray[i]);
+        if (isNaN(add)) {
+            add = 0;
+        };       
+        Sum = Sum + add;    //adding the sum and total of array together
+    };
+    return Sum;    //returns number
+};
 
 
     
@@ -161,10 +181,11 @@ console.log(checkUrl());                        //output for url
     var number = "42";                            //Variable for string to number
     console.log(stringNumber());                  //Output for string to Number
 
-    var money = 21.3                              //Variable for decimal move
-    console.log(moveDec())                         //Output for decimal move
+    var money = 21.3;                              //Variable for decimal move
+    console.log(moveDec());                         //Output for decimal move
 
         //Array function outputs
 
         console.log("Array function outputs");
-
+        
+        console.log(addArray(array));
