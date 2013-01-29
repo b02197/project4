@@ -16,7 +16,7 @@ var checkPhoneNumber = function(){
             startNumberCode = phoneNumber.lastIndexOf("-")+1,
             endNumberCode   = phoneNumber.length;
 
-//These take the variables from the last code and determine the number of digits in the setion        
+//These take the informaation from the last code and determine the number of digits in the setion        
         var areaCode    = phoneNumber.substring(0,endAreaCode),
                 localCode   = phoneNumber.substring(startLocalCode,endLocalCode),
                 numberCode  = phoneNumber.substring(startNumberCode,endNumberCode),
@@ -49,9 +49,51 @@ var checkPhoneNumber = function(){
                 
                     check = false;
                     
-                return check;                              
+                return check;    //Returns Boolean                          
 };
+ 
+ 
+//Does the string follow a pattern like an email address?
+
+//Function to determine if the email address follows a pattern.        
+var checkEmailAddress = function(){
+    
+//Variables to detern the postion of the @ and .
+
+    var endUser   = emailAddress.indexOf("@"),
+        startHost = emailAddress.indexOf("@")+1,
+        endHost   = emailAddress.lastIndexOf("."),
+        startTLD  = emailAddress.lastIndexOf(".")+1,
+        endTLD    = emailAddress.length;
+    
+//These variable take the information from the last variables and determine the length of the address
+
+    var emailUser = emailAddress.substring(0,endUser),
+        emailHost = emailAddress.substring(startHost,endHost),
+        emailGtld = emailAddress.substring(startTLD,endTLD),
+        emailUser = (endUser),
+        emailHost = (endHost - startHost),
+        emailGtld = (emailAddress.length - (emailAddress.lastIndexOf(".")+1));
         
+        
+        if(emailUser >1){emailUser = true}          //checks to see if username is greater then 1 charater
+            else emailUser = false;
+        
+        if(emailHost >1){emailHost = true}          //checks to see if the host name is great then 1 character
+            else emailHost = false;
+            
+        if(emailGtld == 3){emailGtld = true}        // checks to see if the gTLD is equal to 3 charaters
+            else emailGtld = false;
+        
+    
+        
+            if(emailUser && emailHost && emailGtld == true){        //Checks to see if address if formatted to the pattern
+                email = true
+            } else
+                email = false;
+                
+            return email;           //returns boolean
+};
    
 
    
@@ -63,9 +105,10 @@ var checkPhoneNumber = function(){
 
 //String outputs
 console.log("String outputs");
-var phoneNumber = "123-456-7890";      //Variable for phone number
-console.log(checkPhoneNumber());       //Output for phone number
-
+var phoneNumber = "123-456-7890";            //Variable for phone number
+console.log(checkPhoneNumber());             //Output for phone number
+var emailAddress = "Meaton@fullsail.edu";    //Variable for Email
+console.log(checkEmailAddress())             //Output for Email
 
 
 
