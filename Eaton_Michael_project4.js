@@ -96,6 +96,22 @@ var checkEmailAddress = function(){
 };
    
 
+//Is the string a URL(Does it start with http:// or http://)
+
+//function to see if the url matches http:// or https://
+var checkUrl = function(){
+    
+    var urlResults = false;
+    
+    if(url.substring(0,7) == "http://"){    //check to see if url matches http://
+        urlResults = true
+    }
+     if (url.substring(0,8) == "https://"){   //check to see if url matches https://
+        urlResults = true}
+        
+     
+    return urlResults;
+    };
    
     
 
@@ -108,7 +124,7 @@ console.log("String outputs");
 var phoneNumber = "123-456-7890";            //Variable for phone number
 console.log(checkPhoneNumber());             //Output for phone number
 var emailAddress = "Meaton@fullsail.edu";    //Variable for Email
-console.log(checkEmailAddress())             //Output for Email
-
-
+console.log(checkEmailAddress());             //Output for Email
+var url = "http://fulsail.edu";                //Variable for url
+console.log(checkUrl());                        //output for url
 
