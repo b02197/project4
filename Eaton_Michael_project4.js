@@ -158,8 +158,10 @@ var addArray = function(incomingArray) {
 };
 
 
-    
 
+
+
+  
 
 //String function outputs
 
@@ -186,6 +188,5 @@ console.log(checkUrl());                        //output for url
 
         //Array function outputs
 
-        console.log("Array function outputs");
-        
-        console.log(addArray(array));
+        console.log("Array function outputs");   //Variacle for array add problem
+        console.log(addArray(array));           //Output to array add problem
